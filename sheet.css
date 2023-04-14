@@ -1,0 +1,311 @@
+
+.container{
+max-width: 90%;
+margin: 0 auto;
+
+}
+
+
+
+
+.navbar{
+
+display: flex;
+justify-content: space-between;
+padding: 64px;
+
+
+}
+
+
+
+
+.navbar .bar{
+background-color: black;
+height: 4px;
+width: 36px;
+border-radius: 10px;;
+margin: 5px;
+
+
+}
+
+
+
+.navbar .handberger{
+width: 50px;
+height: 50px;
+
+
+
+}
+
+.navbar .left{
+
+font-size: 30px;
+font-weight: bolder;
+
+
+}
+.navbar .right a{
+
+text-decoration: none;
+color: black;
+
+
+}
+
+.navbar  .right{
+width: 400px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+
+
+
+}
+
+.navbar .right a:hover{
+
+    text-decoration: underline;
+    color: black;
+    background-color: rgba(215, 212, 212, 0.5);
+    
+    
+    
+    }
+    
+
+
+.navbar .right img{
+
+width: 24px;
+height: 24px;;
+
+
+}
+
+
+
+
+.project{
+
+
+position: relative; /* this helps position absolut.*/
+
+}
+
+.project img{
+
+
+width: 100%;
+height: 100%;
+object-fit: cover;
+
+}
+
+
+.project .overlay{
+
+
+position: absolute;/*position absolute mean we are able to use top bottom left and right*/
+top: 0;
+left: 0;
+background-color: rgba(255,255,255,0.4);
+width: 100%;
+height: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+margin: 0;
+font-size: 20px;
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+font-weight: bolder;
+opacity: 0;
+transition: 2s ease;
+}
+
+
+
+.project .overlay:hover{
+
+opacity: 1;
+cursor: pointer;
+
+
+}
+
+.navbar .handberger{
+
+
+    display: none;
+}
+.project_grid{
+/*grid-row-gap: 16px;*/
+/*grid-column-gap: 16px;*/
+grid-gap: 16px;
+width: 100%;
+max-width: 90%;
+display: grid;
+margin: 0 auto ;
+
+
+
+grid-template-areas: 
+
+"eth eth alphabet"
+"eth eth traveler"
+"astro   cube  traveler"
+"cup insta insta "
+"cup  insta insta"
+" foam dimensional dimensional "
+
+
+;
+
+
+}
+
+#insta{
+
+    grid-area: insta;
+}
+
+#cup{
+
+grid-area: cup;
+
+
+}
+
+
+
+
+#eth{
+
+grid-area: eth;
+
+
+}
+
+
+
+#alphabet{
+
+
+    grid-area: alphabet;
+}
+
+#traveler{
+
+grid-area: traveler;
+
+}
+
+#astro{
+
+grid-area: astro;
+
+
+} 
+
+
+
+
+#cube{
+
+grid-area: cube;
+
+
+
+}
+
+#dimensional{
+grid-area: dimensional;
+
+
+
+}
+
+#foam{
+
+
+    grid-area: foam;
+}
+
+
+.footer{
+
+text-align: center;
+padding: 64px;
+
+}
+
+
+
+
+
+
+
+
+@media(max-width:  1100px){
+
+.container{
+max-width: 100%;
+
+}
+
+.project_grid{
+
+ max-width: 100%;
+ grid-template-areas: 
+
+"eth eth "
+"alphabet traveler"
+"astro cube"
+"cup insta  "
+" foam dimensional "
+
+
+;
+    }
+
+
+
+
+}
+
+
+
+@media(max-width:700px) {
+.navbar .handberger{
+
+    display: flex;
+    flex-direction: column;
+}
+.navbar .right{
+
+display: none;
+
+
+}
+
+
+
+    .project_grid{
+
+
+        
+        max-width: 100%;
+        grid-template-areas: 
+       
+       "eth eth "
+       "alphabet traveler"
+       "astro cube"
+       "cup insta  "
+       " foam dimensional "
+       
+       
+       ;
+           }
+}
